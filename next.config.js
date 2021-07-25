@@ -1,3 +1,28 @@
+const path = require("path");
+
+module.exports = {
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            config.resolve.fallback.fs = false;
+        }
+        return config;
+    },
+    sassOptions: {
+        includePaths: [path.join(__dirname, "sass")],
+    },
+};
+
+// old config
+// module.exports = {
+//     webpack: (config) => {
+//         config.node = {
+//             fs: "empty",
+//         };
+//         return config;
+//     },
+// };
+
+// disable config
 // module.exports = {
 //     webpack: (config) => {
 //         config.node = {
@@ -8,11 +33,3 @@
 //         return config;
 //     },
 // };
-module.exports = {
-    webpack: (config, { isServer }) => {
-        if (!isServer) {
-            config.resolve.fallback.fs = false;
-        }
-        return config;
-    },
-};
