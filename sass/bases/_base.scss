@@ -1,3 +1,20 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
 body {
-    background-color: blue;
+    background-color: $body-color;
+    color: $text-color;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
 }
