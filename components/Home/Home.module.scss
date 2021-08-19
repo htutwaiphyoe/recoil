@@ -1,1 +1,65 @@
-@use "abstracts/variables";
+@use "abstracts/mixins" as m;
+
+.home {
+    background-color: var(--white-color-light);
+
+    &__container {
+        height: calc(100vh - var(--header-height));
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        // column-gap: 5rem;
+    }
+
+    &__sneaker {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+    }
+
+    &__shape {
+        width: 37.6rem;
+        height: 37.6rem;
+        background-color: var(--dark-color);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    &__image {
+        position: absolute;
+        width: 47rem;
+        top: 3.5rem;
+        max-width: initial;
+        transform: var(--rotate-img);
+        -webkit-transform: var(--rotate-img);
+        -moz-transform: var(--rotate-img);
+        -ms-transform: var(--rotate-img);
+        -o-transform: var(--rotate-img);
+    }
+
+    &__title {
+        font-size: 6rem;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin-bottom: 0.7rem;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__link {
+        display: inline-block;
+        background-color: var(--dark-color);
+        color: var(--white-color);
+        padding: 1.8rem 2.8rem;
+        @include m.radius(0.8rem);
+    }
+}
