@@ -38,11 +38,6 @@ const Navigation = (props) => {
                         </li>
                         <li className={`${classes.header__item}`}>
                             <Link href="/">
-                                <a className={`${classes.header__link}`}>Contact</a>
-                            </Link>
-                        </li>
-                        <li className={`${classes.header__item}`}>
-                            <Link href="/">
                                 <a className={`${classes.header__link}`}>Login</a>
                             </Link>
                         </li>

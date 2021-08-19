@@ -1,5 +1,5 @@
 @use "abstracts/mixins" as m;
-.collection {
+.brand {
     &__container {
         gap: 3rem;
         grid-template-columns: repeat(2, 35rem);

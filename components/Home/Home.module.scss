@@ -59,7 +59,7 @@
         display: inline-block;
         background-color: var(--dark-color);
         color: var(--white-color);
-        padding: 1.8rem 2.8rem;
+        padding: 1.5rem 2.5rem;
         @include m.radius(0.8rem);
 
         @include m.transition(0.3s);
