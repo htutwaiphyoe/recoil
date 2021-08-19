@@ -32,3 +32,9 @@
 .grid {
     display: grid;
 }
+
+.header-scroll {
+    background-color: var(--white-color) !important;
+    color: var(--dark-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
