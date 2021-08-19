@@ -61,5 +61,15 @@
         color: var(--white-color);
         padding: 1.8rem 2.8rem;
         @include m.radius(0.8rem);
+
+        @include m.transition(0.3s);
+
+        &:hover {
+            transform: translateY(0.3rem);
+            -webkit-transform: translateY(0.3rem);
+            -moz-transform: translateY(0.3rem);
+            -ms-transform: translateY(0.3rem);
+            -o-transform: translateY(0.3rem);
+        }
     }
 }

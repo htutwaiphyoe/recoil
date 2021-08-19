@@ -1,0 +1,79 @@
+@use "abstracts/mixins" as m;
+.featuredItem {
+    position: relative;
+    background-color: var(--white-color-light);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include m.radius(5px);
+    @include m.transition(0.3s);
+
+    &__sale {
+        position: absolute;
+        left: 0.8rem;
+        background-color: var(--dark-color);
+        color: var(--white-color);
+        padding: 0.5rem 1.1rem;
+        transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        @include m.radius(0.5rem);
+        font-size: 1.7rem;
+        letter-spacing: 0.1rem;
+    }
+
+    &__image {
+        width: 22rem;
+        transform: var(--rotate-img);
+        -webkit-transform: var(--rotate-img);
+        -moz-transform: var(--rotate-img);
+        -ms-transform: var(--rotate-img);
+        -o-transform: var(--rotate-img);
+        filter: drop-shadow(0 2rem 1rem rgba(0, 0, 0, 0.2));
+        -webkit-filter: drop-shadow(0 2rem 1rem rgba(0, 0, 0, 0.2));
+        margin: 2.5rem 0 4.5rem;
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: var(--font-weight-semi-bold);
+        letter-spacing: 0.1rem;
+        margin-bottom: var(--m-1);
+    }
+
+    &__price {
+        font-size: 1.8rem;
+        margin-bottom: var(--m-1);
+        font-weight: var(--font-weight-medium);
+    }
+
+    &:hover {
+        transform: translateY(-0.25rem);
+        -webkit-transform: translateY(-0.25rem);
+        -moz-transform: translateY(-0.25rem);
+        -ms-transform: translateY(-0.25rem);
+        -o-transform: translateY(-0.25rem);
+    }
+
+    &__link {
+        font-size: 1.7rem;
+        font-weight: var(--font-weight-medium);
+        display: flex;
+        align-items: center;
+        &__icon {
+            font-size: 2.5rem;
+            @include m.transition(0.3s);
+        }
+
+        &:hover &__icon {
+            transform: translateX(0.4rem);
+            -webkit-transform: translateX(0.4rem);
+            -moz-transform: translateX(0.4rem);
+            -ms-transform: translateX(0.4rem);
+            -o-transform: translateX(0.4rem);
+        }
+    }
+}

@@ -1,23 +1,23 @@
 .section {
-    padding: 5rem 0 2rem;
-}
+    padding: 8rem 0 3rem;
 
-.section-title {
-    position: relative;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    font-size: 2rem;
-
-    &::after {
-        content: "";
-        position: absolute;
-        width: 5.6rem;
-        height: 0.3rem;
-        top: -1.6rem;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: var(--dark-color);
+    &__title {
+        position: relative;
+        text-align: center;
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 5.6rem;
+            height: 0.3rem;
+            top: -1.5rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: var(--dark-color);
+        }
     }
 }
 
