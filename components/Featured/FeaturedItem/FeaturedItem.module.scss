@@ -64,16 +64,12 @@
         display: flex;
         align-items: center;
         &__icon {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             @include m.transition(0.3s);
         }
 
-        &:hover &__icon {
-            transform: translateX(0.4rem);
-            -webkit-transform: translateX(0.4rem);
-            -moz-transform: translateX(0.4rem);
-            -ms-transform: translateX(0.4rem);
-            -o-transform: translateX(0.4rem);
+        &:active {
+            text-decoration: underline;
         }
     }
 }

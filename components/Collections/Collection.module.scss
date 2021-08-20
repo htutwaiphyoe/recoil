@@ -1,0 +1,14 @@
+@use "abstracts/mixins" as m;
+.collection {
+    &__container {
+        gap: 3rem;
+        grid-template-columns: repeat(2, 35rem);
+        justify-content: center;
+    }
+
+    @include m.responsive(767, 1) {
+        &__container {
+            grid-template-columns: repeat(1, 35rem);
+        }
+    }
+}
