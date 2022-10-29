@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import Canvas from './Canvas'
+import Atoms from './components/Atoms'
 import {ChakraProvider} from '@chakra-ui/react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {RecoilRoot} from 'recoil'
@@ -12,6 +13,9 @@ ReactDOM.render(
             <ChakraProvider>
                 <Router>
                     <Switch>
+                        <Route path="/atoms">
+                            <Atoms />
+                        </Route>
                         <Route>
                             <Canvas />
                         </Route>

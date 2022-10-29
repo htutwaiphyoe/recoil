@@ -38,4 +38,20 @@ Key features:
     3. persist application state
     4. rehydration (backwards compatibility)
 
-Why recoil use: when the component tree and state structure don't match, normal component => ancestor => other component, so unnecessary rerender, for the recoil, store state in outside of react, so only necessary components are rendered 
+Why recoil use: when the component tree and state structure don't match, normal component => ancestor => other component, so unnecessary rerender, for the recoil, store state in outside of react, so only necessary components are rendered
+
+03. Atoms - Basics
+
+create atoms example. normal flow is hoist state to the page level component and pass down to the children. but the problem is when the component tree is super deep, it causes props drill (need to pass deep down). we can use ContextAPI, but we will use Recoil atoms.
+
+Atoms need few options
+
+1. unique key which must be serializable value that labels particular atom. useful for persisting state (key, value pairs)
+
+2. default value for atom state
+
+to use atoms state,import atoms and pass key and default value and use useRecoilState and pass atom. destructure to access. It can be shared synchronous state between components. Like multiple useState link up together. It use built-in react state management so it is compatible with React. But other state management libraries may not be. If only value is needed, use useRecoilValue and pass atoms. That returns only value of atoms.
+
+Recoil state is stored outside of react.
+
+***Recoil atom key should be unique due to serializable conflicts***
