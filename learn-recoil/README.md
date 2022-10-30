@@ -55,3 +55,11 @@ to use atoms state,import atoms and pass key and default value and use useRecoil
 Recoil state is stored outside of react.
 
 ***Recoil atom key should be unique due to serializable conflicts***
+
+04. Selectors - Basics
+
+selectors are used to derived data based on atom/selector states and to share that derived state between components. selectors need unique key and get function which will derive state and return value. get method can access the values of atoms and other selectors using from get argument which is also a method which accepts atoms or selectors and return current value of them. it will reevaluate if the dependency value changes.
+
+to set value of selector value, add set method in selectors, it takes two arguments, first objects of recoil methods and newValue which is to be set. if we make selectors settable, need to use useRecoilState and destructure value and set function. without set method in selectors, cannot use useRecoilState. need to give type of newValue in selectors with typescript. to set newValue to the certain atom, pull set method from first argument and pass atom and newValue to that set method. it will work reactively due to single source of truth. if we have two atoms, need to sync manually both state. avoid duplicate state if we can derived other states from one state in react, get method from first argument is like get method in get method of selector. multiple atoms can be in one selector.
+
+***Selectors automatically recompute if the dependency changes***
